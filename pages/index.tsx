@@ -10,7 +10,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
       // We need a fixed date to fix SSR hydration mismatch error.
       // buildDate,
       ...(await serverSideTranslations(locale || "zh-CN", [
-        'common',
+        'common'
       ])),
     },
     revalidate: process.env.NODE_ENV !== 'production' ? 20 : 1 * 24 * 60 * 60,
