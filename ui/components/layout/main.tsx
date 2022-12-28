@@ -22,16 +22,14 @@ const Layout = ({
   hideFooter,
   children
 }: LayoutProps) => {
-  const [collapsed, setCollapsed] = useState(false);
   const { t } = useTranslation();
-  // const [api, contextHolder] = notification.useNotification();
 
   return (
     <>
       <Head>
         <title>{t('title')}</title>
       </Head>
-      {!hideHeader && <Header collapsed={collapsed} setCollapsed={setCollapsed} />}
+      {!hideHeader && <Header />}
       <main>
         <div className={clsx(
             'min-h-full py-16 md:mx-4',

@@ -21,8 +21,6 @@ export function SignInPage(): JSX.Element {
     >
       <SignInForm
         title="登录"
-        subtitle="👋 欢迎登录."
-        allowAnonymous={allowAnonymous}
       />
     </Layout>
   );
