@@ -21,7 +21,6 @@
     "@trpc/server": "^10.7.0",
     "autoprefixer": "^10.4.13",
     "clsx": "^1.2.1",
-    "cross-env": "^7.0.3",
     "i18next": "^22.4.6",
     "lodash.find": "^4.6.0",
     "next": "^13.0.7",
