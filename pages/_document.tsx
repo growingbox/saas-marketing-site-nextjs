@@ -36,6 +36,6 @@ export default (props) => {
         <NextScript />
         <div dangerouslySetInnerHTML={{__html: kefu }} />
       </body>
-    </Html>      
+    </Html>
   );
 };
