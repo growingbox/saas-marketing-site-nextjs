@@ -1,0 +1,77 @@
+import Link from "next/link";
+import { Heading } from "./heading";
+import { Text } from "./text";
+
+
+type FeatureProps = {
+  heading: string;
+  content: React.ReactNode;
+  // icon: Icon;
+};
+
+const features: FeatureProps[] = [
+  {
+    heading: '高可定制',
+    content:
+      '高可定制.✨',
+    // icon: IconFigma,
+  },
+  {
+    heading: '聚合聊天',
+    content: (
+      <>
+        <span>
+          全渠道聊天
+        </span>
+        <Link className="ml-1" href="/docs/features/privacy-friendly">
+          xxx
+        </Link>
+        .
+      </>
+    ),
+    // icon: IconLock,
+  },
+  {
+    heading: '全渠道电商',
+    content:
+      '全渠道电商数据集成.',
+    // icon: IconCode,
+  },
+  {
+    heading: '全渠道聊天系统',
+    content:
+      '全渠道聊天平台集成.',
+    // icon: IconCode,
+  },
+];
+
+export function PrimaryFeatures() {
+  return (
+    <ul className="grid gap-8 lg:grid-cols-2 lg:gap-10">
+    {features.map((item) => (
+      <li className="" key={item.heading}>
+        <Feature {...item} />
+      </li>
+    ))}
+  </ul>
+  );
+}
+
+
+function Feature(props: FeatureProps): JSX.Element {
+  return (
+    <section className="flex flex-row space-x-4 sm:flex-col sm:space-x-0">
+      <div className="mb-4 inline-block h-fit w-fit rounded-full bg-primary-300 p-3 text-primary-1000">
+        {/*<Icon size={26} />*/}
+      </div>
+      <div>
+        <Heading as="h4" className="mb-3 font-semibold">
+          {props.heading}
+        </Heading>
+        <Text variant="secondary" className="max-w-sm">
+          {props.content}
+        </Text>
+      </div>
+    </section>
+  );
+}
