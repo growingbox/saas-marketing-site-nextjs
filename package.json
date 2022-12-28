@@ -4,11 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "next",
-    "build": "cross-env NODE_ENV=production SERVERLESS=true next build",
-    "build:css": "NODE_ENV=production tailwindcss -o public/tailwind.css -m",
-    "start": "next start",
-    "deploy": "slt deploy",
-    "deploy:layer": "slt deploy --target=./layer"
+    "build": "cross-env NODE_ENV=production next build",
+    "start": "next start"
   },
   "author": "",
   "license": "MIT",
